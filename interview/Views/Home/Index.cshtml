@@ -1,0 +1,29 @@
+﻿@* @{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+ *@
+
+ @model List<interview.Models.ViewModel>
+
+
+    <table>
+        <tr>
+            <th>National ID</th>
+            <th>Branch ID</th>
+            <th>Account Serial ID</th>
+        </tr>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.NationalID</td>
+                <td>Branch ID from SQL Result</td>
+                <td>Account Serial ID from SQL Result</td>
+            </tr>
+        }
+    </table>
+
